@@ -1,2 +1,137 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.7) 50%), url('<%= image_path('banner1.jpg')%>');">
+  <div>
+    <div class="hidden-xs hidden-sm">
+      <%= image_tag("LogoMakr_8aOmEp.png")%>
+    </div>
+    <h1 style="font-family: 'Shadows Into Light';">PANAMAKARE</h1>
+    <p style="font-family:  'Raleway' ;">TRIPS CON CONSCIENCIA</p>
+    <br>
+    <i class="fa fa-angle-double-down symbols" aria-hidden="true"></i>
+  </div>
+</div>
+<div class="container" style="padding-top: 150px;" id="about">
+  <h1 class="text-center" style="font-family: 'Shadows Into Light';">¿ Quienes Somos ?</h1>
+  <hr>
+  <br>
+  <p class="text-center" style="font-size: 1.2em; font-family:  'Raleway'; ">Somos panamakare, una iniciativa verde, pro-social y aventurera que busca mostrarte las bellezas de Panamá, de la forma más económica posible. Organizando trips (Excursiones) en donde nos aventuraremos a los sitios más espectaculares de nuestro país mediante la utilización del transporte público.</p>
+
+  <p class="text-center" style="font-size: 1.2em; font-family:  'Raleway'; ">Nuestro objetivo es que conozcas nuevos lugares de una manera responsable y aportes a las comunidades que visitaremos</p>
+  <p class="text-center" style="font-size: 1.2em; font-family:  'Raleway'; "> Nuestra meta es empoderar a las comunidades apartadas de Panamá que poseen exuberantes recursos naturales, para que se desarrollen de forma responsable, sostenible y sepas de lo que tu Panamá tiene para mostrarte.</p>
+  <br>
+  <hr>
+</div>
+<div class="container " style="padding-top: 150px; ">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 text-center">
+      <i class="fas fa-recycle" style="font-size:120px; color: #1f9f2a;"></i>
+      <br>
+      <h1 class="text-center" style=" font-family: 'Shadows Into Light'; ">ZeroWaste</h1>
+      <br>
+      <p style="font-size: 1.0em; font-family:  'Raleway'; " >Los #zerowastetrips, los cuales consisten en que te comprometes a ese día reducir al máximo los residuos y la basura que generamos cotidianamente. <br> ¡No se permiten objetos desachables!</p>
+    </div>
+    <div class="col-xs-12 col-md-4 text-center">
+      <i class="fas fa-hands"style="font-size:120px; color: #1f9f2a;"></i>
+      <br>
+      <h1 class="text-center" style=" font-family: 'Shadows Into Light';">Donaciones</h1>
+      <br>
+      <p style="font-size: 1.0em; font-family:  'Raleway'; " >Recolectamos donaciones que van completamente dirigidas a las comunidades donde hacemos trips, a su vez puedes donar tu tiempo y conocimientos que compartirás con las comunidades mediante talleres, conversatorios o charlas.</p>
+    </div>
+    <div class="col-xs-12 col-md-4 text-center">
+      <i class="fas fa-bus" style="font-size:120px; color: #1f9f2a;"></i>
+      <br>
+      <h1 class="text-center" style=" font-family: 'Shadows Into Light'; ">Transporte Local</h1>
+      <br>
+      <p style="font-size: 1.0em; font-family:  'Raleway'; " >Nuestra iniciativa es consciente de la huella de carbono que todos los dìas crece más, por lo que utilizaremos siempre en nuestros trips el transporte local, ¡así vamos más personas en menos autos!</p>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="container" style="padding-top: 150px; padding-bottom: 150px; ">
+    <div id="eventos">
+      <br>
+      <h1 class="text-center" style="font-family: 'Shadows Into Light';">Proximos Eventos</h1>
+      <br>
+      <hr>
+      <br>
+      <% @trips.each do |trip| %>
+      <div class="card-trip">
+        <img src='<%= image_path('lagloria3.png')%>' />
+        <div class="card-trip-infos ">
+          <div>
+            <h1 style="font-family: 'Shadows Into Light';"><%=trip.title%></h1>
+            <p>
+              <strong><i class="fas fa-calendar-week"></i> Date:</strong> <br>
+              <%= trip.date %>
+            </p>
+
+            <p>
+              <strong> <i class="fas fa-location-arrow"></i> Location:</strong> <br>
+              <%= trip.location %>
+            </p>
+
+            <p>
+              <strong><i class="fas fa-file-alt"></i> Description:</strong> <br>
+              <%= trip.description %>
+            </p>
+            <br>
+            <%= link_to trip_path(trip) do %>
+            <h4 class="btn btn-panamakare">Registrate</h4>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <br>
+      <hr>
+    </div>
+  </div>
+</div>
+<div style="background-color: black;" id="videos">
+  <div class="container text-center" style="padding-top: 90px; padding-bottom: 90px;">
+    <hr>
+    <div style="">
+      <iframe width="auto" height="315" src="https://www.youtube.com/embed/VfU1V-C_-V0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+    </div>
+    <hr>
+  </div>
+</div>
+<div class="container text-center " style="padding-top: 150px" id="q&a">
+  <h1 style="font-family: 'Shadows Into Light';">Preguntas Frecuentes</h1>
+  <hr>
+  <br>
+ <p style="font-family:  'Raleway'; ";>¿Porque somos ZeroWaste Trips?</p>
+ <p> Buscamos enseñarte que puedes explorar, aventurarte y pasar un buen tiempo sin necesidad de contaminar, es por eso que no se permite que traigas botellas de plástico, envoltorios de ningún tipo, utensilios de plástico de un solo uso, como las bolsas, pajitas, cubiertos o platos ni ningún producto envuelto en plástico. Buscamos generar consciencia y enseñarte a rechazar todo aquello que realmente no necesitamos y que practiques un consumo responsable. </p>
+
+ <p style="font-family:  'Raleway';"> ¿Qué puedes traer a los Trips ?</p>
+  <p>Puedes traer cualquier recipiente que sea reutilizable, ya sean termos para el agua, envases reutilizables para almacenar comida, chips o frutas. Es decir, debes traer tu agua en termo y tus snaks o comida en envases reutilizables, creenos... gastarás menos y ¡la tierra te lo agradecerá!</p>
+
+ <p style="font-family:  'Raleway';">  ¿Qué es el Budget? </p>
+ <p> Es el costo mínimo que necesitarás para el trip, este cubre el transporte ida y vuelta, lo debes tener en efectivo y administrarlo pagando cada transporte al que nos subamos. El budget NO incluye el aporte que debes dar al proyecto. </p>
+  <h1 class="btn btn-panamakare"> <a href="/questions" style="color: white;"> Ver más </a> </h1>
+  <br>
+  <hr>
+</div>
+<div class="container text-center " style="padding-top: 150px" id="redes">
+  <h1 style="font-family: 'Shadows Into Light';">SIGUENOS</h1>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="social">
+        <a href="https://www.instagram.com/panamakare/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="social">
+        <a href="https://www.youtube.com/channel/UC4nqtO1IIH7sHnlGIfjcP7g"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="social">
+        <a href="https://api.whatsapp.com/send?phone=+50762132411"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+

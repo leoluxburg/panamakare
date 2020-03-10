@@ -1,1 +1,110 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  background-attachment: fixed;
+}
+
+.banner img{
+  height: 150px;
+}
+
+.small img{
+  height: 300px;
+}
+
+.punto img{
+  height: 75px;
+}
+.banner2 {
+  color: white;
+  text-align: center;
+  height: 60vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+   background-attachment: fixed;
+}
+
+.banner img{
+  height: 200px;
+}
+
+.small img{
+  height: 300px;
+}
+
+.punto img{
+  height: 75px;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.btn-panamakare{
+  background-color:#1f9f2a;
+  color: white;
+}
+
+.social a{
+  color: black;
+  font-size: 70px;
+  text-decoration: none;
+}
+
+.footer2{
+  background-color: black;
+}
+.footer2 img{
+  height: 60px;
+}
+.social a:hover{
+  color: #1f9f2a;
+  font-size: 80px;
+  text-decoration: none;
+}
 // Specific CSS for your home-page

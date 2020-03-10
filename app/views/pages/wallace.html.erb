@@ -1,0 +1,22 @@
+<div class="container" style="padding-top: 150px;">
+  <h1 class="text-center" style="font-family: 'Shadows Into Light';">Administrador</h1>
+  <hr>
+  <h4>Trips</h4>
+  <% @trips.each do |trip| %>
+
+  <p><%= trip.title %> | <%= link_to 'Show', trip %> | <%= link_to 'Edit', edit_trip_path(trip) %> | <%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <h4>Lista</h4>
+   <% trip.backpackers.each do |dude| %>
+    <p><%= dude.name %>  | <%= link_to 'Show', dude %> | <%= link_to 'Destroy', dude, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+  <% end %>
+  <%= link_to 'New trip', new_trip_path %>
+  <br>
+  <br>
+  <h4>Q&A</h4>
+  <% @questions.each do |q| %>
+
+  <p><%= q.title %> | <%= link_to 'Show', q %> | <%= link_to 'Edit', edit_question_path(q) %> | <%= link_to 'Destroy', q, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <%= link_to 'New question', new_question_path %>
+  <% end %>
+</div>

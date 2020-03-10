@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_01_181844) do
+ActiveRecord::Schema.define(version: 2020_03_09_224322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "backpackers", force: :cascade do |t|
+    t.string "name"
+    t.string "lastname"
+    t.string "nationality"
+    t.string "age"
+    t.string "email"
+    t.string "profession"
+    t.string "phone"
+    t.bigint "trip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_backpackers_on_trip_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "title"
+    t.text "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "title"
+    t.string "date"
+    t.string "location"
+    t.text "description"
+    t.text "route"
+    t.string "budget"
+    t.text "budget_description"
+    t.text "donations"
+    t.text "workshop"
+    t.integer "adults"
+    t.integer "kids"
+    t.integer "grampas"
+    t.integer "avility"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +66,5 @@ ActiveRecord::Schema.define(version: 2020_03_01_181844) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "backpackers", "trips"
 end

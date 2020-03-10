@@ -1,0 +1,21 @@
+<div class="container text-center " style="padding-top: 150px">
+  <h1 style="font-family: 'Shadows Into Light';">Preguntas Frecuentes</h1>
+  <hr>
+  <br>
+  <p style="font-family:  'Raleway'; ";>¿Porque somos ZeroWaste Trips?</p>
+  <p> Buscamos enseñarte que puedes explorar, aventurarte y pasar un buen tiempo sin necesidad de contaminar, es por eso que no se permite que traigas botellas de plástico, envoltorios de ningún tipo, utensilios de plástico de un solo uso, como las bolsas, pajitas, cubiertos o platos ni ningún producto envuelto en plástico. Buscamos generar consciencia y enseñarte a rechazar todo aquello que realmente no necesitamos y que practiques un consumo responsable. </p>
+
+  <p style="font-family:  'Raleway';"> ¿Qué puedes traer a los Trips ?</p>
+  <p>Puedes traer cualquier recipiente que sea reutilizable, ya sean termos para el agua, envases reutilizables para almacenar comida, chips o frutas. Es decir, debes traer tu agua en termo y tus snaks o comida en envases reutilizables, creenos... gastarás menos y ¡la tierra te lo agradecerá!</p>
+
+  <p style="font-family:  'Raleway';">  ¿Qué es el Budget? </p>
+  <p> Es el costo mínimo que necesitarás para el trip, este cubre el transporte ida y vuelta, lo debes tener en efectivo y administrarlo pagando cada transporte al que nos subamos. El budget NO incluye el aporte que debes dar al proyecto. </p>
+  <% @questions.each do |question| %>
+
+  <p style="font-family:  'Raleway';"><%= question.title %></p>
+  <p><%= question.answer %><p>
+
+
+    <% end %>
+
+

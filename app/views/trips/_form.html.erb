@@ -1,0 +1,31 @@
+
+<div class="container">
+<h4>PROXIMO TRIP</h4>
+<hr>
+  <div class="form">
+<%= simple_form_for(@trip) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :date %>
+    <%= f.input :location %>
+    <%= f.input :description %>
+    <%= f.input :route %>
+    <%= f.input :budget %>
+    <%= f.input :budget_description %>
+    <%= f.input :donations %>
+    <%= f.input :workshop %>
+    <%= f.input :adults %>
+    <%= f.input :kids %>
+    <%= f.input :grampas %>
+    <%= f.input :avility %>
+  </div>
+<hr>
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-success" %>
+  </div>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,33 @@
+<br>
+<br>
+<div class="container">
+<h4>Registro</h4>
+<hr>
+<%= simple_form_for(@backpacker) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<h6>Selcciona tu trip</h6>
+  <div class="form-inputs">
+    <%= f.association :trip %>
+    <%= f.input :name %>
+    <%= f.input :lastname %>
+    <%= f.input :nationality %>
+    <%= f.input :age %>
+    <%= f.input :email %>
+    <%= f.input :profession %>
+    <%= f.input :phone %>
+  </div>
+<br>
+<h6 class="text-center">
+  *Al registrate en el trip estas aceptando nuestros <a href="/terms">Terminos y Condiciones</a>*
+</h6>
+<h6 class="text-center">
+  *Para confirmar tu asistencia al trip debes tranferir el a porte al proyecto <a href="/bank">a la cuenta de PanamaKare</a>*
+</h6>
+<br>
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-panamakare" %>
+  </div>
+<% end %>
+<hr>
+</div>

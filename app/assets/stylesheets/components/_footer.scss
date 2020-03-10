@@ -1,0 +1,20 @@
+.footer {
+  background: black;
+  color: #CCCCCC;
+}
+
+
+.footer img{
+  height: 90px;
+}
+
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}

@@ -1,0 +1,94 @@
+<br>
+<br>
+<br>
+<div class="banner2" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.7) 50%), url('<%= image_path('lagloria3.png')%>');">
+  <div>
+    <div class="hidden-xs hidden-sm">
+
+    </div>
+    <h1 style="font-family: 'Shadows Into Light';"> #zerowaste <br> <%= @trip.title %> </h1>
+    <br>
+    <i class="fa fa-angle-double-down symbols" aria-hidden="true"></i>
+
+  </div>
+</div>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1 class="text-center">Registraste</h1>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <p>
+        <strong><i class="fas fa-calendar-week"></i> Date:</strong> <br>
+        <%= @trip.date %>
+      </p>
+
+      <p>
+        <strong> <i class="fas fa-location-arrow"></i> Location:</strong> <br>
+        <%= @trip.location %>
+      </p>
+      <p>
+        <strong><i class="fas fa-hand-holding-heart"></i> Aporte al proyecto:</strong> <br>
+        5.00 PAB <a href="/bank">Tranferir a Panamakare</a>
+      </p>
+      <p>
+        <strong><i class="fas fa-file-alt"></i> Description:</strong> <br>
+        <%= @trip.description %>
+      </p>
+      <br>
+      <%= link_to new_backpacker_path do %>
+      <h4 class="btn btn-panamakare">Registrate</h4>
+      <% end %>
+      <p>
+        <strong>Cupos disponibles:</strong>
+        <% x =  @trip.avility.to_i %>
+        <% y = @trip.backpackers.count %>
+        <%= x - y%>
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <p>
+        <strong> <i class="fas fa-map-marked-alt"></i> Route:</strong> <br>
+        <%= @trip.route %>
+      </p>
+
+      <p>
+        <strong><i class="fas fa-dollar-sign"></i> Budget:</strong> <br>
+        <%= @trip.budget %>
+      </p>
+
+      <p>
+        <strong><i class="fas fa-file-alt"></i> Budget description:</strong> <br>
+        <%= @trip.budget_description %>
+      </p>
+
+      <p>
+        <strong><i class="fas fa-hand-holding-heart"></i> Donations:</strong> <br>
+        <%= @trip.donations %>
+      </p>
+
+      <p>
+        <strong><i class="fas fa-pen"></i> Workshop:</strong> <br>
+        <%= @trip.workshop %>
+      </p>
+
+      <p>
+        <strong><i class="fas fa-user"></i> Adults(18-45):</strong> <br>
+        <%= @trip.adults %>
+      </p>
+
+      <p>
+        <strong><i class="fas fa-user"></i> Kids(0-17):</strong> <br>
+        <%= @trip.kids %>
+      </p>
+
+      <p>
+        <strong><i class="fas fa-user"></i> Grampas:</strong> <br>
+        <%= @trip.grampas %>
+      </p>
+    </div>
+
+  </div>
+<hr>
+</div>
+

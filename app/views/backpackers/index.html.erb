@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Backpackers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Nationality</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Profession</th>
+      <th>Phone</th>
+      <th>Trip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @backpackers.each do |backpacker| %>
+      <tr>
+        <td><%= backpacker.name %></td>
+        <td><%= backpacker.lastname %></td>
+        <td><%= backpacker.nationality %></td>
+        <td><%= backpacker.age %></td>
+        <td><%= backpacker.email %></td>
+        <td><%= backpacker.profession %></td>
+        <td><%= backpacker.phone %></td>
+        <td><%= backpacker.trip %></td>
+        <td><%= link_to 'Show', backpacker %></td>
+        <td><%= link_to 'Edit', edit_backpacker_path(backpacker) %></td>
+        <td><%= link_to 'Destroy', backpacker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Backpacker', new_backpacker_path %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @backpacker.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @backpacker.lastname %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @backpacker.nationality %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @backpacker.age %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @backpacker.email %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @backpacker.profession %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @backpacker.phone %>
+</p>
+
+<p>
+  <strong>Trip:</strong>
+  <%= @backpacker.trip %>
+</p>
+
+<%= link_to 'Edit', edit_backpacker_path(@backpacker) %> |
+<%= link_to 'Back', backpackers_path %>
