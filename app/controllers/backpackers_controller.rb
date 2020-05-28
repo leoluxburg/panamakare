@@ -1,6 +1,6 @@
 class BackpackersController < ApplicationController
-  before_action :set_backpacker, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:new]
+  before_action :set_backpacker, only: [:show, :edit, :update, :destroy, :new]
+  skip_before_action :authenticate_user!, only: [:new, :create]
 
 
   # GET /backpackers
