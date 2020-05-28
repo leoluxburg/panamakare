@@ -1,5 +1,5 @@
 class BackpackersController < ApplicationController
-  before_action :set_backpacker, only: [:show, :edit, :update, :destroy, :new]
+  before_action :set_backpacker, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:new, :create]
 
 
@@ -30,7 +30,7 @@ class BackpackersController < ApplicationController
 
     respond_to do |format|
       if @backpacker.save
-        format.html { redirect_to @backpacker, notice: 'Backpacker was successfully created.' }
+        format.html { redirect_to good_path, notice: 'Backpacker was successfully created.' }
         format.json { render :show, status: :created, location: @backpacker }
       else
         format.html { render :new }
