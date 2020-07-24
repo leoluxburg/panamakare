@@ -1,0 +1,15 @@
+<div class="container" style="padding-top: 150px;">
+
+<p>
+  <strong>Name:</strong>
+  <%= @donation.name %>
+</p>
+
+<p>
+  <strong>Donation:</strong>
+  <%= @donation.donation %>
+</p>
+
+<%= link_to 'Edit', edit_donation_path(@donation) %> |
+<%= link_to 'Back', donations_path %>
+</div>

@@ -1,6 +1,8 @@
 <div class="container" style="padding-top: 150px;">
   <h1 class="text-center" style="font-family: 'Shadows Into Light';">Administrador</h1>
   <hr>
+    <h4>Donaciones</h4>
+    <%= link_to 'New Donation', new_donation_path %> | <%= link_to 'All Donations', donations_path %>
   <h4>Trips</h4>
   <% @trips.each do |trip| %>
 

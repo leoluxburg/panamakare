@@ -1,0 +1,35 @@
+<div class="container" style="padding-top: 150px;">
+  <h1 class="text-center" style="font-family: 'Shadows Into Light';">WeKare</h1>
+  <hr>
+  <h2>Proyecto: Comunidades Sostenibles</h2>
+  <p>Gracias a donaciones de negocios y héroes locales hemos ayudado a más de 100 familias con necesidad en Panamá Oeste y Coclé en este difícil tiempo de cuarentena. </p>
+  <p>Sin embargo, estas y muchas más familias que recibieron donaciones tendrán hambre nuevamente.</p>
+  <p>Construiremos gallineros para estas familias, brindándoles los materiales, los pollitos y el alimento para estos.</p>
+  <p>
+  A su vez donaremos semillas para que puedan cultivar sus propios vegetales y granos. ¡Asegurándonos de que no solo coman 1 o 2 semanas, sino meses y hasta años! </p>
+  <p> “El que le suple semilla al que siembra también le suplirá pan para que coma, aumentará los cultivos y hará que ustedes produzcan una abundante cosecha de justicia.”
+  ‭‭ ¡Cualquier ayuda es más que importante y bienvenida!</p>
+  <br>
+  <a href="/bank"><p class="btn btn-panamakare">Donar</p></a>
+<br>
+<hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Total Donado: <%= @money %> $</h4>
+      <br>
+      <h4>Lista de Donaciones</h4>
+      <% @donations.each do |donation| %>
+      <h5> <%= donation.name %> <%= donation.donation %>0$ </h5>
+      <% end %>
+
+    </div>
+    <div class="col-md-6">
+    <h4>Total Gastado:</h4>
+    <br>
+    <h4>Lista de Gastos</h4>
+
+    <p>Facturas</p>
+    </div>
+  </div>
+
+</div>
