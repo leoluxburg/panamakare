@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/all_trips', to: 'pages#all_trips'
   get '/about_us', to: 'pages#about_us'
   get '/contact', to: 'pages#contact'
+  get '/preguntas', to: 'pages#preguntas'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

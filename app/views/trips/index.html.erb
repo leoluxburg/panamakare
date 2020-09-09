@@ -5,7 +5,7 @@
   <hr>
   <% @trips.each do |trip| %>
   <div class="card-trip">
-    <img src='<%= image_path('lagloria3.png')%>' />
+  <%= "<img src=' #{trip.image}'  />".html_safe%>
     <div class="card-trip-infos">
       <div>
         <h1 style="font-family: 'Shadows Into Light';"><%=trip.title%></h1>
