@@ -1,0 +1,9 @@
+<div class="container" style="padding-top: 150px;">
+<h1>Trips</h1>
+<hr>
+  <% @trips.each do |trip| %>
+
+  <p><%= trip.title %> | <%= link_to 'Show', trip %> | <%= link_to 'Edit', edit_trip_path(trip) %> | <%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+  <%= link_to 'New trip', new_trip_path %>
+</div>

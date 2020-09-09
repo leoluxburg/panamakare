@@ -7,12 +7,18 @@
     <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <%= link_to "Home", "/", class: "dropdown-item" %>
-        <%= link_to "Quienes somos", "#about", class: "dropdown-item" %>
-        <%= link_to "Trips", "#eventos", class: "dropdown-item" %>
+        <%= link_to "Quienes somos", "/about_us", class: "dropdown-item" %>
+        <%= link_to "Trips", "/trips", class: "dropdown-item" %>
         <%= link_to "WeKare", "/wekare", class: "dropdown-item" %>
-        <%= link_to "Videos", "#videos", class: "dropdown-item" %>
-        <%= link_to "Preguntas Frecuentes", "#q&a", class: "dropdown-item" %>
-        <%= link_to "Redes", "#redes", class: "dropdown-item" %>
+        <%= link_to "Videos", "/videos", class: "dropdown-item" %>
+        <%= link_to "Preguntas Frecuentes", "/questions", class: "dropdown-item" %>
+        <%= link_to "Contact", "/contact", class: "dropdown-item" %>
+        <% if current_user %>
+        <%= link_to "Dashboard", "/wallace", class: "dropdown-item" %>
+       <%= link_to destroy_user_session_path, method: :delete do %>
+       <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+       <% end %>
+       <% end %>
     </ul>
   </div>
 </div>

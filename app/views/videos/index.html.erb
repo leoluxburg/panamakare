@@ -1,0 +1,13 @@
+<div class="container text-center " style="padding-top: 150px">
+  <h1 style="font-family: 'Shadows Into Light';">Videos</h1>
+  <hr>
+  <br>
+  <% @videos.each do |video| %>
+  <div class="video-player">
+  <p><%= video.video.html_safe %><p>
+  </div>
+    <% end %>
+    <br>
+    <hr>
+</div>
+

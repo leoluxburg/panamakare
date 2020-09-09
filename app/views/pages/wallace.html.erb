@@ -1,24 +1,32 @@
 <div class="container" style="padding-top: 150px;">
   <h1 class="text-center" style="font-family: 'Shadows Into Light';">Administrador</h1>
   <hr>
+  <div class="row text-center">
+    <div class="col-md-4">
     <h4>Donaciones</h4>
     <%= link_to 'New Donation', new_donation_path %> | <%= link_to 'All Donations', donations_path %>
-  <h4>Trips</h4>
-  <% @trips.each do |trip| %>
-
-  <p><%= trip.title %> | <%= link_to 'Show', trip %> | <%= link_to 'Edit', edit_trip_path(trip) %> | <%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  <h4>Lista</h4>
-   <% trip.backpackers.each do |dude| %>
-    <p><%= dude.name %>  | <%= link_to 'Show', dude %> | <%= link_to 'Destroy', dude, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <% end %>
-  <% end %>
-  <%= link_to 'New trip', new_trip_path %>
-  <br>
-  <br>
-  <h4>Q&A</h4>
-  <% @questions.each do |q| %>
-
-  <p><%= q.title %> | <%= link_to 'Show', q %> | <%= link_to 'Edit', edit_question_path(q) %> | <%= link_to 'Destroy', q, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  <%= link_to 'New question', new_question_path %>
-  <% end %>
+    </div>
+     <div class="col-md-4">
+    <h4>Trips</h4>
+    <%= link_to 'New Trip', new_trip_path %> | <a href="/all_trips">All Trips</a>
+    </div>
+    <div class="col-md-4">
+    <h4>Listas</h4>
+      <a href="/listas">Ver listas</a>
+    </div>
+    <div class="col-md-4">
+    <h4>Q&A</h4>
+    <%= link_to 'New question', new_question_path %> | <a href="/preguntas">All Questions</a>
+    </div>
+    <div class="col-md-4">
+    <h4>Videos</h4>
+    <%= link_to 'New Video', new_video_path %> | <%= link_to 'All videos', videos_path %>
+    </div>
+    <div class="col-md-4">
+    <h4>Articulo</h4>
+    <%= link_to 'New Articles', new_article_path %> | <%= link_to 'All Articles', videos_path %>
+    </div>
+  </div>
+  <hr>
+<br>
 </div>

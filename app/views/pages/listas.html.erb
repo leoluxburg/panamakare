@@ -1,0 +1,14 @@
+<div class="container" style="padding-top: 150px;">
+  <h1 class="text-center" style="font-family: 'Shadows Into Light';">Listas</h1>
+  <hr>
+  <div class="row">
+   <% @trips.each do |trip| %>
+   <div class="col-md-4">
+     <h4><%= trip.title%></h4>
+     <% trip.backpackers.each do |dude| %>
+     <p><%= dude.name %>  | <%= link_to 'Show', dude %> | <%= link_to 'Destroy', dude, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+     <% end %>
+     <% end %>
+   </div>
+ </div>
+</div>

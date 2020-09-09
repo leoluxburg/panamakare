@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+  resources :videos
   resources :donations
   resources :questions
   resources :backpackers
@@ -10,6 +12,11 @@ Rails.application.routes.draw do
   get '/terms', to: 'pages#terms'
   get '/bank', to: 'pages#bank'
   get '/wallace', to: 'pages#wallace'
+  get '/listas', to: 'pages#listas'
+  get '/all_trips', to: 'pages#all_trips'
+  get '/about_us', to: 'pages#about_us'
+  get '/contact', to: 'pages#contact'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 

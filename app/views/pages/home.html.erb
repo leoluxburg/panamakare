@@ -55,7 +55,7 @@
       <br>
       <% @trips.each do |trip| %>
       <div class="card-trip">
-        <img src='<%= image_path('lagloria3.png')%>' />
+        <img src=<%= trip.image %> />
         <div class="card-trip-infos ">
           <div>
             <h1 style="font-family: 'Shadows Into Light';"><%=trip.title%></h1>
@@ -89,8 +89,8 @@
 <div style="background-color: black;" id="videos">
   <div class="container text-center" style="padding-top: 90px; padding-bottom: 90px;">
     <hr>
-    <div style="">
-      <iframe width="auto" height="315" src="https://www.youtube.com/embed/VfU1V-C_-V0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+    <div class="video-player">
+      <%= @video.video.html_safe %>
     </div>
     <hr>
   </div>

@@ -1,6 +1,5 @@
 
 <div class="container">
-<h4>PROXIMO TRIP</h4>
 <hr>
   <div class="form">
 <%= simple_form_for(@trip) do |f| %>
@@ -12,6 +11,7 @@
     <%= f.input :date %>
     <%= f.input :location %>
     <%= f.input :description %>
+    <%= f.input :image %>
     <%= f.input :route %>
     <%= f.input :budget %>
     <%= f.input :budget_description %>

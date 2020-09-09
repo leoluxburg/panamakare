@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @trips = Trip.all
     @trip_count = Trip.count
+    @video = Video.last
   end
 
   def good
@@ -30,4 +31,25 @@ class PagesController < ApplicationController
     @trips = Trip.all
     @questions = Question.all
   end
+
+  def all_trips
+    @trips = Trip.all
+  end
+
+  def about_us
+    @trips = Trip.all
+  end
+
+  def contact_us
+
+  end
+
+  def listas
+    @trips = Trip.all
+  end
+
+  def preguntas
+    @questions = Question.all
+  end
+
 end
