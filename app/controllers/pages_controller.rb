@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :terms, :bank, :good, :wekare]
+  skip_before_action :authenticate_user!, only: [:home, :terms, :bank, :good, :wekare, :about_us, :videos, :contact_us]
 
   def home
     @trips = Trip.all
